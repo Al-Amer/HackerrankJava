@@ -1,3 +1,10 @@
+/*
+Maria plays college basketball and wants to go pro. Each season she maintains a record of her play.
+She tabulates the number of times she breaks her season record for most points and least points
+in a game. Points scored in the first game establish her record for the season,
+and she begins counting from there.
+ */
+
 package ProblemSolving.Algorithms.Implementation.BreakingTheRecords;
 
 import java.io.*;
@@ -47,7 +54,7 @@ class Result {
 public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
- //       BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
         int n = Integer.parseInt(bufferedReader.readLine().trim());
 
@@ -56,7 +63,7 @@ public class Solution {
                 .collect(toList());
 
         List<Integer> result = Result.breakingRecords(scores);
-/*
+
         bufferedWriter.write(
                 result.stream()
                         .map(Object::toString)
@@ -65,11 +72,11 @@ public class Solution {
         );
 
 
- */
+
         bufferedReader.close();
-//       bufferedWriter.close();
+       bufferedWriter.close();
        // Test Method
-        System.out.println(result.toString());
+  //      System.out.println(result.toString());
 
 
 

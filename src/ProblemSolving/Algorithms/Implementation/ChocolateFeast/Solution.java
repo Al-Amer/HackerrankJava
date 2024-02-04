@@ -58,7 +58,7 @@ class Result {
 public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-//        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
         int t = Integer.parseInt(bufferedReader.readLine().trim());
 
@@ -74,16 +74,16 @@ public class Solution {
 
                 int result = Result.chocolateFeast(n, c, m);
 
- //               bufferedWriter.write(String.valueOf(result));
- //               bufferedWriter.newLine();
-                System.out.println(result);
+                bufferedWriter.write(String.valueOf(result));
+                bufferedWriter.newLine();
+
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
         });
 
         bufferedReader.close();
- //       bufferedWriter.close();
+        bufferedWriter.close();
     }
 }
 
